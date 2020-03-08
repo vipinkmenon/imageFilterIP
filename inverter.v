@@ -45,6 +45,8 @@ module inverter #(parameter DATA_WIDTH=32)
            for(i=0;i<DATA_WIDTH/8;i=i+1)
            begin
               m_axis_data[i*8+:8] <= 255-s_axis_data[i*8+:8]; 
+              //This is same as writing
+              //m_axis_data <= 0xFFFFFFFF - s_axis_data;
            end 
        end
     end
